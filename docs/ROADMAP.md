@@ -82,21 +82,17 @@ numbers for the base model.
 
 ### M1 - SFT
 LoRA SFT, chat template, eval, MLflow, adapter registered.
-**Shows:** a clean, reproducible fine-tune
 
 ### M2 - DPO
 Preference tuning on top of SFT, judge win rate, ablation on beta and data size.
-**Shows:** preference optimisation and how to measure it
 
 ### M3 - GRPO
 Reward functions (correct answer, valid format, length penalty), GRPO with vLLM rollouts,
 reward curves, accuracy before/after, examples of reward hacking found and fixed.
-**Shows:** RL with verifiable rewards, the current frontier of post-training
 
 ### M4 - Analysis
 Forgetting check (MMLU), judge bias check (position swap, self-preference), cost table,
 write-up of what each stage really changed.
-**Shows:** judgement, not just running scripts
 
 ### M5 - Arena and serving
 vLLM multi-LoRA, Gradio chat arena (blind A/B voting optional), Docker + Helm.
@@ -139,9 +135,3 @@ CLAUDE.md  Makefile  docs/adr/
   steps; any hacking you find becomes part of the write-up.
 - Judge bias. Mitigation: position swapping, a second judge on a subset, report agreement.
 - Licence terms of datasets and base model: check and note them in the README.
-
-## Interview talking points
-
-- What SFT, DPO and GRPO each changed, with numbers, and what they cost.
-- A concrete reward-hacking example and the fix.
-- Why the judge needs controls, and how much its verdicts can be trusted.
